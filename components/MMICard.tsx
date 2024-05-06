@@ -45,20 +45,6 @@ export default function MMICard() {
             </div>
           </CardContent>
         </Card>
-        <Card className="bg-white dark:bg-gray-800 rounded-lg shadow-md">
-          <CardHeader>
-            <CardTitle>Market Mood Index</CardTitle>
-            <CardDescription>Bloomberg</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center justify-between">
-              <div className="text-4xl font-bold">
-                <span className="text-yellow-500">0.0%</span>
-              </div>
-              <TrendingUpIcon className="w-8 h-8 text-yellow-500" />
-            </div>
-          </CardContent>
-        </Card>
       </div>
       <div className="container max-w-3xl mt-12 md:mt-16 grid gap-8">
         <Accordion collapsible type="single">
