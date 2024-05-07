@@ -21,6 +21,7 @@ export default async function Home() {
             status: (mmi as any).status as STATUS,
             source: (mmi as any).source as string,
             score: (mmi as any).score as number,
+            $updatedAt: mmi.$updatedAt,
           }))}
         />
 

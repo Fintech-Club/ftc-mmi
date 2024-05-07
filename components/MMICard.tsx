@@ -33,6 +33,11 @@ export default function MMICard({ mmis }: { mmis: MMI[] }) {
               </div>
               <p className="text-4xl">{getReaction(mmi.status.toString())}</p>
             </div>
+            <div>
+              <p className="text-xs text-gray-400 flex items-center justify-end pt-4">
+                Last Updated: {new Date(mmi.$updatedAt).toLocaleString()}
+              </p>
+            </div>
           </CardContent>
         </Card>
       ))}

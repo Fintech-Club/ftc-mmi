@@ -36,4 +36,5 @@ export type MMI = {
   status: STATUS;
   source: string;
   score: number;
+  $updatedAt: string;
 };
