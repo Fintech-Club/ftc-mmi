@@ -9,7 +9,7 @@ export default function InfoAccordion() {
     <div className="container max-w-3xl mt-12 md:mt-16 grid gap-8">
       <Accordion collapsible type="single">
         <AccordionItem value="what-is-mmi">
-          <AccordionTrigger className="text-lg font-medium text-white">
+          <AccordionTrigger className="text-lg font-medium text-white text-left">
             What is the Market Mood Index?
           </AccordionTrigger>
           <AccordionContent>
@@ -26,7 +26,7 @@ export default function InfoAccordion() {
       </Accordion>
       <Accordion collapsible type="single">
         <AccordionItem value="how-is-mmi-calculated">
-          <AccordionTrigger className="text-lg font-medium text-white">
+          <AccordionTrigger className="text-lg font-medium text-white text-left">
             How is the Market Mood Index calculated?
           </AccordionTrigger>
           <AccordionContent>
