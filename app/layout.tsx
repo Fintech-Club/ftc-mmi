@@ -9,6 +9,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "FTC MMI",
+  description: "FTC Market Mood Index",
 };
 
 export default function RootLayout({

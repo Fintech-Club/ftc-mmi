@@ -7,8 +7,6 @@ import InfoAccordion from "@/components/InfoAccordian";
 export default async function Home() {
   const { total, documents: mmis } = await getMMIs();
 
-  console.log(mmis);
-
   return (
     <main className="select-none">
       <div className="flex items-center justify-center w-full px-10 py-5 bg-gray-100 dark:bg-gray-900 text-white">
