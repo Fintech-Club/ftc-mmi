@@ -43,6 +43,31 @@ export default function InfoAccordion() {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
+      <div>
+        <Accordion collapsible type="single">
+          <AccordionItem value="how-is-mmi-calculated">
+            <AccordionTrigger className="text-lg font-medium text-white text-left">
+              How is the Market Mood Index calculated?
+            </AccordionTrigger>
+            <AccordionContent>
+              <p className="text-gray-500 dark:text-gray-400">
+                The discrepancy between CNN's MMI index and tickertape's MMI
+                index stems from differing methodologies and data sources. The
+                MMI scale, combining unemployment and inflation rates, evaluates
+                economic health. Variations arise from distinct data
+                sourcing—government statistics versus independent research—and
+                diverse weighting methods, affecting final values. Calculation
+                algorithms, update frequencies, and geographical scopes also
+                contribute. Each index may prioritize unemployment and inflation
+                differently, impacting MMI values. These differences underscore
+                the complexity of economic analysis and highlight the importance
+                of comprehending diverse factors influencing composite indices
+                like the MMI.
+              </p>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
     </div>
   );
 }
