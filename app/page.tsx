@@ -1,11 +1,24 @@
-import { getMMIs } from "@/service/mmi";
-import Image from "next/image";
+"use client";
+
+import { useQuery } from "@tanstack/react-query";
 import MMICard from "@/components/MMICard";
-import { MMI, STATUS } from "@/lib/types";
+import { STATUS } from "@/lib/types";
 import InfoAccordion from "@/components/InfoAccordian";
 
-export default async function Home() {
-  const { total, documents: mmis } = await getMMIs();
+export default function Home() {
+  // const { total, documents: mmis } = await getMMIs();
+
+  const { data } = useQuery({
+    queryKey: ["mmis"],
+    queryFn: async () => {
+      const res = await fetch("/api/mmi");
+
+      console.log(res.json());
+      return await res.json();
+    },
+  });
+
+  console.log(data);
 
   return (
     <main className="select-none">
@@ -15,7 +28,7 @@ export default async function Home() {
 
       <section className="flex flex-col items-center justify-start min-h-screen w-full bg-gray-100 dark:bg-gray-900 p-4 md:p-8">
         <MMICard
-          mmis={mmis.map((mmi) => ({
+          mmis={([] as any[]).map((mmi) => ({
             status: (mmi as any).status as STATUS,
             source: (mmi as any).source as string,
             score: (mmi as any).score as number,

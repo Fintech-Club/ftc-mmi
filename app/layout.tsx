@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { QueryProvider } from "@/components/query-provider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -18,11 +19,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.png" />
-      </head>
-      <body className={poppins.className}>{children}</body>
-    </html>
+    <QueryProvider>
+      <html lang="en">
+        <head>
+          <link rel="icon" href="/favicon.png" />
+        </head>
+        <body className={poppins.className}>{children}</body>
+      </html>
+    </QueryProvider>
   );
 }

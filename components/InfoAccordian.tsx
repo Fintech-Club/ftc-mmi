@@ -1,9 +1,12 @@
+// "use client";
+
 import {
   AccordionTrigger,
   AccordionContent,
   AccordionItem,
   Accordion,
 } from "@/components/ui/accordion";
+
 export default function InfoAccordion() {
   return (
     <div className="container max-w-3xl mt-12 md:mt-16 grid gap-8">
