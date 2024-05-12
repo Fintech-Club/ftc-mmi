@@ -1,3 +1,5 @@
+// "use client";
+
 import {
   CardTitle,
   CardDescription,
@@ -6,14 +8,17 @@ import {
   Card,
 } from "@/components/ui/card";
 
-import { MMI, STATUS_REACTION, getReaction } from "@/lib/types";
+import { MMI, getReaction } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 export default function MMICard({ mmis }: { mmis: MMI[] }) {
   return (
     <div className="container max-w-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
       {mmis.map((mmi) => (
-        <Card className="bg-white dark:bg-gray-800 rounded-lg shadow-md">
+        <Card
+          key={mmi.source}
+          className="bg-white dark:bg-gray-800 rounded-lg shadow-md"
+        >
           <CardHeader>
             <CardTitle className="uppercase">{mmi.source}</CardTitle>
             <CardDescription>Market Mood Index</CardDescription>
